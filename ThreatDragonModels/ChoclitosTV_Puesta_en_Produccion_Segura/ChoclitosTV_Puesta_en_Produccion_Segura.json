@@ -135,6 +135,13 @@
                 "2d643584-13d1-4301-a9da-3289cd3c45a1",
                 "21a74ed7-54eb-4dfc-8c51-312b971cee29"
               ]
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -1302,7 +1309,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "repudiation": 0
               }
             }
@@ -1438,8 +1445,8 @@
                 "text": "Administradores IT / DevOps"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1536,9 +1543,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "c2a37ebd-65b5-4047-9183-8703fd663222",
+                  "title": "Suplantación del rol Administrador",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Spoofing",
+                  "description": "Robo de credenciales mediante phishing o reutilización o elevación de privilegios",
+                  "mitigation": "Conexión VPN cifrada con MFA",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "2"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 7,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -2847,6 +2872,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Toni",
-    "threatTop": 2
+    "threatTop": 3
   }
 }
