@@ -77,7 +77,7 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "f1ae6746-564c-4645-8e03-5acf4f91eb71",
-                "8bb05a54-544f-4ca5-94a2-403d136cd579"
+                "75c2f26b-34f2-4802-a0cb-4b8f97414a78"
               ],
               "containedElements": [
                 "51547a02-fb24-42a4-b6d3-9eda57ae6df0",
@@ -88,7 +88,7 @@
           {
             "position": {
               "x": 824,
-              "y": 180
+              "y": 190
             },
             "size": {
               "width": 260,
@@ -111,7 +111,9 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "819660f6-51e3-4c0b-bcd2-2a8a10b0507f",
-                "8bb05a54-544f-4ca5-94a2-403d136cd579"
+                "4897a72e-e6d6-4c94-941f-78de1cf2aaa3",
+                "8135b293-e689-4d54-b73d-24c3c118b55a",
+                "3c82e660-7399-421a-b90b-5695a6ae9359"
               ],
               "containedElements": [
                 "100c55d5-2d05-4077-b556-3cf8de9d2796",
@@ -1622,7 +1624,7 @@
             "vertices": [
               {
                 "x": 810,
-                "y": 620
+                "y": 600
               }
             ]
           },
@@ -1646,7 +1648,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Autenticación",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1658,111 +1660,164 @@
               "protocol": "",
               "threats": [],
               "trustBoundaryIds": [
-                "ac52a587-5207-46e0-91db-7fcb2f0529d7",
+                "ac52a587-5207-46e0-91db-7fcb2f0529d7"
+              ]
+            },
+            "labels": [
+              "Autenticación"
+            ],
+            "id": "75c2f26b-34f2-4802-a0cb-4b8f97414a78",
+            "source": {
+              "x": 890,
+              "y": 560
+            },
+            "target": {
+              "cell": "6a2afd07-4d89-453e-a323-b674c0a727ed",
+              "port": "5a922f7d-1999-4695-bc39-9299e9d0be66"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Almacenamiento de token",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
                 "6b198459-9c5b-4983-9f0f-bf7dbeb4d2f5"
               ]
             },
             "labels": [
-              "Data Flow"
+              "Almacenamiento de token"
             ],
-            "id": "8bb05a54-544f-4ca5-94a2-403d136cd579",
+            "id": "4897a72e-e6d6-4c94-941f-78de1cf2aaa3",
             "source": {
-              "cell": "21a74ed7-54eb-4dfc-8c51-312b971cee29",
-              "port": "cd2283c8-2ccf-4f33-9424-a1e1f86904e4"
+              "x": 704,
+              "y": 472
             },
             "target": {
-              "cell": "6a2afd07-4d89-453e-a323-b674c0a727ed",
-              "port": "319fbbae-7099-4d95-b4b9-b864d064702b"
+              "cell": "2d643584-13d1-4301-a9da-3289cd3c45a1",
+              "port": "cd2283c8-2ccf-4f33-9424-a1e1f86904e4"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
             },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Consulta cache",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "6b198459-9c5b-4983-9f0f-bf7dbeb4d2f5"
+              ]
+            },
+            "labels": [
+              "Consulta cache"
+            ],
+            "id": "8135b293-e689-4d54-b73d-24c3c118b55a",
+            "source": {
+              "x": 718,
+              "y": 376
+            },
+            "target": {
+              "cell": "2d643584-13d1-4301-a9da-3289cd3c45a1",
+              "port": "cd2283c8-2ccf-4f33-9424-a1e1f86904e4"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Consultar",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "6b198459-9c5b-4983-9f0f-bf7dbeb4d2f5"
+              ]
+            },
+            "labels": [
+              "Consultar"
+            ],
+            "id": "3c82e660-7399-421a-b90b-5695a6ae9359",
+            "source": {
+              "x": 672,
+              "y": 262
+            },
+            "target": {
+              "cell": "100c55d5-2d05-4077-b556-3cf8de9d2796",
+              "port": "cd2283c8-2ccf-4f33-9424-a1e1f86904e4"
             }
           }
         ]
