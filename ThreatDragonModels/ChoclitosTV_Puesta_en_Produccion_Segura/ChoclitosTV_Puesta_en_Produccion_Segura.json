@@ -188,8 +188,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "3658bbf4-33bc-433e-96d1-f2342cc571e5",
             "zIndex": -1,
+            "id": "3658bbf4-33bc-433e-96d1-f2342cc571e5",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Servicio de Terceros",
@@ -215,7 +215,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Auth Mobile/Web"
+                "text": "Auth Mobile/Web\nP1"
               },
               "body": {
                 "stroke": "red",
@@ -311,7 +311,7 @@
             "id": "1d5c6973-2169-4f8c-b80a-886ff43418d4",
             "data": {
               "type": "tm.Process",
-              "name": "Auth Mobile/Web",
+              "name": "Auth Mobile/Web\nP1",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -357,7 +357,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Servicio Streaming"
+                "text": "Servicio Streaming\nP3"
               },
               "body": {
                 "stroke": "red",
@@ -453,7 +453,7 @@
             "id": "51547a02-fb24-42a4-b6d3-9eda57ae6df0",
             "data": {
               "type": "tm.Process",
-              "name": "Servicio Streaming",
+              "name": "Servicio Streaming\nP3",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -499,7 +499,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Gestión de acceso"
+                "text": "Gestión de acceso\nP4"
               },
               "body": {
                 "stroke": "red",
@@ -595,7 +595,7 @@
             "id": "6a2afd07-4d89-453e-a323-b674c0a727ed",
             "data": {
               "type": "tm.Process",
-              "name": "Gestión de acceso",
+              "name": "Gestión de acceso\nP4",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -641,7 +641,7 @@
             },
             "attrs": {
               "text": {
-                "text": "S3 Bucket"
+                "text": "S3 Bucket\nD1"
               },
               "topLine": {
                 "stroke": "red",
@@ -742,7 +742,7 @@
             "id": "100c55d5-2d05-4077-b556-3cf8de9d2796",
             "data": {
               "type": "tm.Store",
-              "name": "S3 Bucket",
+              "name": "S3 Bucket\nD1",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -787,7 +787,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Redis Cache"
+                "text": "Redis Cache\nD2"
               },
               "topLine": {
                 "stroke": "red",
@@ -888,7 +888,7 @@
             "id": "2d643584-13d1-4301-a9da-3289cd3c45a1",
             "data": {
               "type": "tm.Store",
-              "name": "Redis Cache",
+              "name": "Redis Cache\nD2",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -933,7 +933,7 @@
             },
             "attrs": {
               "text": {
-                "text": "PostgreSQL"
+                "text": "PostgreSQL\nD3"
               },
               "topLine": {
                 "stroke": "red",
@@ -1034,7 +1034,7 @@
             "id": "21a74ed7-54eb-4dfc-8c51-312b971cee29",
             "data": {
               "type": "tm.Store",
-              "name": "PostgreSQL",
+              "name": "PostgreSQL\nD3",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1066,13 +1066,6 @@
                 "informationDisclosure": 0,
                 "denialOfService": 1
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1086,7 +1079,7 @@
             },
             "attrs": {
               "text": {
-                "text": "CI/CD"
+                "text": "CI/CD\nP5"
               },
               "body": {
                 "stroke": "red",
@@ -1182,7 +1175,7 @@
             "id": "8953943a-33f2-40cb-b1fa-b876db42e202",
             "data": {
               "type": "tm.Process",
-              "name": "CI/CD",
+              "name": "CI/CD\nP5",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1228,7 +1221,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Usuarios"
+                "text": "Usuarios\nE1"
               },
               "body": {
                 "stroke": "#333333",
@@ -1324,7 +1317,7 @@
             "id": "17a843e3-e00d-424d-9604-3f3cb3e39e5f",
             "data": {
               "type": "tm.Actor",
-              "name": "Usuarios",
+              "name": "Usuarios\nE1",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -1345,7 +1338,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Helpdesk"
+                "text": "Helpdesk\nE2"
               },
               "body": {
                 "stroke": "red",
@@ -1441,7 +1434,7 @@
             "id": "2c36cd60-d156-4e51-a1d1-f72974c50c2b",
             "data": {
               "type": "tm.Actor",
-              "name": "Helpdesk",
+              "name": "Helpdesk\nE2",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -1493,7 +1486,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Desarrolladores"
+                "text": "Desarrolladores\nE4"
               },
               "body": {
                 "stroke": "red",
@@ -1589,7 +1582,7 @@
             "id": "f9f6a23c-63c9-4ab6-9e65-c7e7bc5a6742",
             "data": {
               "type": "tm.Actor",
-              "name": "Desarrolladores",
+              "name": "Desarrolladores\nE4",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -1628,7 +1621,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Administradores IT / DevOps"
+                "text": "Administradores IT / DevOps\nE3"
               },
               "body": {
                 "stroke": "red",
@@ -1724,7 +1717,7 @@
             "id": "5555adb7-5e7c-4e1e-8555-4ed4ceef5ef6",
             "data": {
               "type": "tm.Actor",
-              "name": "Administradores IT / DevOps",
+              "name": "Administradores IT / DevOps\nE3",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -2712,7 +2705,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Administración infraestructura"
+                "text": "Administración infraestructura\nP6"
               },
               "body": {
                 "stroke": "red",
@@ -2722,6 +2715,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -2807,7 +2801,7 @@
             "id": "23470a1a-764d-47b5-bf7c-cc19883d6664",
             "data": {
               "type": "tm.Process",
-              "name": "Administración infraestructura",
+              "name": "Administración infraestructura\nP6",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2840,8 +2834,7 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 1
               }
-            },
-            "zIndex": 11
+            }
           },
           {
             "position": {
@@ -2854,7 +2847,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Pasarela de pagos"
+                "text": "Pasarela de pagos\nP7"
               },
               "body": {
                 "stroke": "red",
@@ -2864,6 +2857,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -2947,10 +2941,9 @@
               ]
             },
             "id": "b4b0a7c2-157b-4fc5-b6d1-a3eeeef433ea",
-            "zIndex": 12,
             "data": {
               "type": "tm.Process",
-              "name": "Pasarela de pagos",
+              "name": "Pasarela de pagos\nP7",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2996,7 +2989,7 @@
             },
             "attrs": {
               "text": {
-                "text": "CDN de Contenidos"
+                "text": "CDN de Contenidos\nP8"
               },
               "body": {
                 "stroke": "red",
@@ -3006,6 +2999,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -3091,7 +3085,7 @@
             "id": "a3ce6f9a-ab8f-4c80-867e-571feb345d14",
             "data": {
               "type": "tm.Process",
-              "name": "CDN de Contenidos",
+              "name": "CDN de Contenidos\nP8",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -3124,8 +3118,7 @@
                 "denialOfService": 1,
                 "elevationOfPrivilege": 0
               }
-            },
-            "zIndex": 13
+            }
           },
           {
             "position": {
@@ -3138,7 +3131,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Servicio de suscripción"
+                "text": "Servicio de suscripción\nP2"
               },
               "body": {
                 "stroke": "red",
@@ -3148,6 +3141,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 14,
             "ports": {
               "groups": {
                 "top": {
@@ -3233,7 +3227,7 @@
             "id": "6bf45a2a-fe28-472e-b308-cd4ab4eed0c5",
             "data": {
               "type": "tm.Process",
-              "name": "Servicio de suscripción",
+              "name": "Servicio de suscripción\nP2",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -3266,8 +3260,7 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
-            },
-            "zIndex": 14
+            }
           },
           {
             "position": {
@@ -3280,7 +3273,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Backup Server"
+                "text": "Backup Server\nD4"
               },
               "topLine": {
                 "stroke": "red",
@@ -3295,6 +3288,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 15,
             "ports": {
               "groups": {
                 "top": {
@@ -3378,10 +3372,9 @@
               ]
             },
             "id": "ec52bc5e-8908-442f-80be-6f780e7792f0",
-            "zIndex": 15,
             "data": {
               "type": "tm.Store",
-              "name": "Backup Server",
+              "name": "Backup Server\nD4",
               "description": "Copias de Seguridad",
               "outOfScope": false,
               "isTrustBoundary": false,
