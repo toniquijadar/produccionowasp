@@ -644,11 +644,13 @@
                 "text": "S3 Bucket"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -745,13 +747,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "aa728bac-82a3-44b7-b112-ec85ca4faad1",
+                  "title": "Exposición de contenido",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Exposición de contenido de forma no autorizada por versiones vulnerables o desactualizadas.",
+                  "mitigation": "Mantener las versiones actualizadas o realizar parcheos y revisiones periódicas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": "10"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -768,11 +790,13 @@
                 "text": "Redis Cache"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -869,13 +893,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "19280c51-e60b-4b48-950a-d65ecf21a3a1",
+                  "title": "Robo de tokens de sesión",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Robo de sesión en Redis si no hay autenticación ni TLS desde la capa de aplicación.",
+                  "mitigation": "Autenticación obligatoria mediante contraseña en el servidor redis y configurar cifrado TLS",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": "9"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -892,11 +936,13 @@
                 "text": "PostgreSQL"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -993,13 +1039,40 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "ad526c16-c323-4d48-adfb-062709efbdd5",
+                  "title": "Ransomware",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Ransomware que cifre PostgreSQL y alcance el Backup Server y deje a la plataforma sin servicio ni recuperación posible.",
+                  "mitigation": "Segmentación de red, copias de seguridad separada de la red corporativa.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": "15"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -1264,7 +1337,7 @@
           {
             "position": {
               "x": 223.75,
-              "y": 722
+              "y": 730
             },
             "size": {
               "width": 112.5,
@@ -1388,11 +1461,24 @@
                   "new": false,
                   "number": 1,
                   "score": "20"
+                },
+                {
+                  "id": "48467ee8-e2ff-4f49-afba-21c277a5aa12",
+                  "title": "Acciones sin registro",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Acciones administrativas o consultas del equipo de soporte sin registro fiable o logs, que impedirían conocer accesos indebidos.",
+                  "mitigation": "Centralización del sistema de logs y almacenamiento de logs inmutables",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": "9"
                 }
               ],
               "threatFrequency": {
                 "spoofing": 2,
-                "repudiation": 0
+                "repudiation": 2
               }
             }
           },
@@ -2771,8 +2857,8 @@
                 "text": "Pasarela de pagos"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2869,12 +2955,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "70604fbd-af46-4ada-8c10-ebf0c6b97c4b",
+                  "title": "Fallo de servicio",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Caída o degradación de la pasarela de pagos",
+                  "mitigation": "Al ser gestionado por terceros, no se puede hacer más que contactar con ellos. ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": "12"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -2891,8 +2999,8 @@
                 "text": "CDN de Contenidos"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2988,12 +3096,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "b529c5c0-2ddb-4e02-a04f-85b162f44f1b",
+                  "title": "Fallo en el servicio",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Caída o degracadión del servicio CDN",
+                  "mitigation": "Al ser gestionado por terceros, no hay mitigación posible más que contactar con los proveedores.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "12"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             },
             "zIndex": 13
           },
@@ -3290,6 +3420,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Toni",
-    "threatTop": 10
+    "threatTop": 20
   }
 }
