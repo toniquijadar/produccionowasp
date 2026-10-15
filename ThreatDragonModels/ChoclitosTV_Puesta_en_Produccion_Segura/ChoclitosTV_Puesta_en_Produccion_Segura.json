@@ -3153,11 +3153,13 @@
                 "text": "Backup Server"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3254,13 +3256,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "96884ec3-783b-4619-b229-ffd1dbfb21ef",
+                  "title": "Ransomware",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Ransomware que cifre PostgreSQL y alcance el Backup Server y deje a la plataforma sin servicio ni recuperación posible.",
+                  "mitigation": "Segmentación de red, copias de seguridad separada de la red corporativa.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": "15"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
             }
           }
         ]
@@ -3268,6 +3290,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Toni",
-    "threatTop": 9
+    "threatTop": 10
   }
 }
