@@ -44,7 +44,8 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "7acc06cf-197c-419e-9348-9197165428d7"
+                "7acc06cf-197c-419e-9348-9197165428d7",
+                "d26e08e7-3027-47ad-8c23-ec840b913a22"
               ],
               "containedElements": [
                 "1d5c6973-2169-4f8c-b80a-886ff43418d4"
@@ -77,7 +78,9 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "f1ae6746-564c-4645-8e03-5acf4f91eb71",
-                "75c2f26b-34f2-4802-a0cb-4b8f97414a78"
+                "75c2f26b-34f2-4802-a0cb-4b8f97414a78",
+                "4b4eb068-d602-40e3-9ea5-2796d9ae5e0d",
+                "1c17ecbc-d026-4dfc-a0ec-0772af2612ee"
               ],
               "containedElements": [
                 "51547a02-fb24-42a4-b6d3-9eda57ae6df0",
@@ -146,9 +149,13 @@
               "description": "Zona Interna",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
-              "crossingFlows": [],
+              "crossingFlows": [
+                "1a92cf20-33c0-4bd6-8635-6f34606c0832",
+                "fe9d2e9c-eaa1-4c8d-b1a7-9eed4e04ab65"
+              ],
               "containedElements": [
-                "8953943a-33f2-40cb-b1fa-b876db42e202"
+                "8953943a-33f2-40cb-b1fa-b876db42e202",
+                "23470a1a-764d-47b5-bf7c-cc19883d6664"
               ]
             }
           },
@@ -1123,7 +1130,7 @@
           },
           {
             "position": {
-              "x": 605.75,
+              "x": 293.75,
               "y": 712
             },
             "size": {
@@ -1135,8 +1142,8 @@
                 "text": "Helpdesk"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1233,9 +1240,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "6ac554ba-9583-4724-a8e1-760fd3e0e7f0",
+                  "title": "Suplantación de rol Helpdesk",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing",
+                  "description": "Elevación de privilegios ya que no hay segregación por roles",
+                  "mitigation": "Apolicación de segregación de roles y conexión a través de red interna",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "20"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -1357,8 +1382,8 @@
           },
           {
             "position": {
-              "x": 1199.75,
-              "y": 724
+              "x": 1191,
+              "y": 772
             },
             "size": {
               "width": 130,
@@ -1610,7 +1635,7 @@
               ]
             },
             "labels": [
-              "Registro/comprobación"
+              "Registro/comprobació"
             ],
             "id": "819660f6-51e3-4c0b-bcd2-2a8a10b0507f",
             "source": {
@@ -1819,12 +1844,418 @@
               "cell": "100c55d5-2d05-4077-b556-3cf8de9d2796",
               "port": "cd2283c8-2ccf-4f33-9424-a1e1f86904e4"
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Conexión VPN",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "f292f814-f2d3-4342-a7df-da43df91f20c"
+              ]
+            },
+            "labels": [
+              "Conexión VPN"
+            ],
+            "id": "1a92cf20-33c0-4bd6-8635-6f34606c0832",
+            "source": {
+              "cell": "5555adb7-5e7c-4e1e-8555-4ed4ceef5ef6",
+              "port": "529c4ae4-ef91-4cb0-8412-95b649666d62"
+            },
+            "target": {
+              "cell": "23470a1a-764d-47b5-bf7c-cc19883d6664",
+              "port": "c7da7bf4-5d2a-4cdd-a6af-2d3857af08b7"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Conexión",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "f292f814-f2d3-4342-a7df-da43df91f20c"
+              ]
+            },
+            "labels": [
+              "Conexión"
+            ],
+            "id": "fe9d2e9c-eaa1-4c8d-b1a7-9eed4e04ab65",
+            "source": {
+              "x": 1430,
+              "y": 240
+            },
+            "target": {
+              "cell": "8953943a-33f2-40cb-b1fa-b876db42e202",
+              "port": "5a922f7d-1999-4695-bc39-9299e9d0be66"
+            },
+            "vertices": [
+              {
+                "x": 1400,
+                "y": 260
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Conexión",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "261d96ef-e3fc-470f-9343-8a9871d4e946"
+              ]
+            },
+            "labels": [
+              "Conexión"
+            ],
+            "id": "d26e08e7-3027-47ad-8c23-ec840b913a22",
+            "source": {
+              "cell": "2c36cd60-d156-4e51-a1d1-f72974c50c2b",
+              "port": "529c4ae4-ef91-4cb0-8412-95b649666d62"
+            },
+            "target": {
+              "cell": "1d5c6973-2169-4f8c-b80a-886ff43418d4",
+              "port": "c7da7bf4-5d2a-4cdd-a6af-2d3857af08b7"
+            },
+            "vertices": [
+              {
+                "x": 349.75,
+                "y": 680
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Login",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "ac52a587-5207-46e0-91db-7fcb2f0529d7"
+              ]
+            },
+            "labels": [
+              "Login"
+            ],
+            "id": "4b4eb068-d602-40e3-9ea5-2796d9ae5e0d",
+            "source": {
+              "x": 360,
+              "y": 490
+            },
+            "target": {
+              "cell": "6a2afd07-4d89-453e-a323-b674c0a727ed",
+              "port": "c7da7bf4-5d2a-4cdd-a6af-2d3857af08b7"
+            },
+            "vertices": [
+              {
+                "x": 510,
+                "y": 580
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "ac52a587-5207-46e0-91db-7fcb2f0529d7"
+              ]
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "1c17ecbc-d026-4dfc-a0ec-0772af2612ee",
+            "source": {
+              "x": 894,
+              "y": 302
+            },
+            "target": {
+              "cell": "51547a02-fb24-42a4-b6d3-9eda57ae6df0",
+              "port": "5a922f7d-1999-4695-bc39-9299e9d0be66"
+            },
+            "vertices": [
+              {
+                "x": 820,
+                "y": 332
+              }
+            ]
+          },
+          {
+            "position": {
+              "x": 1141,
+              "y": 449
+            },
+            "size": {
+              "width": 230,
+              "height": 170
+            },
+            "attrs": {
+              "text": {
+                "text": "Administración infraestructura"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "319fbbae-7099-4d95-b4b9-b864d064702b"
+                },
+                {
+                  "group": "right",
+                  "id": "5a922f7d-1999-4695-bc39-9299e9d0be66"
+                },
+                {
+                  "group": "bottom",
+                  "id": "c7da7bf4-5d2a-4cdd-a6af-2d3857af08b7"
+                },
+                {
+                  "group": "left",
+                  "id": "7e9a84f2-af17-4fb1-8f18-f5b4fa11dadc"
+                }
+              ]
+            },
+            "id": "23470a1a-764d-47b5-bf7c-cc19883d6664",
+            "data": {
+              "type": "tm.Process",
+              "name": "Administración infraestructura",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "df8650a5-06b1-43ad-b843-c345ea3d836c",
+                  "title": "Acceso no autorizado a la infraestructura",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Elevation of privilege",
+                  "description": "Un usuario no autorizado podría conectarse y manipular cualquier parte de la infraestructura.",
+                  "mitigation": "Conexión VPN ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": "5"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
+            },
+            "zIndex": 11
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "Toni",
-    "threatTop": 0
+    "threatTop": 2
   }
 }
